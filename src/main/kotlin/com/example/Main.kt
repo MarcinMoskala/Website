@@ -1,10 +1,14 @@
 package com.example
 
-import org.jetbrains.ktor.application.*
-import org.jetbrains.ktor.features.*
-import org.jetbrains.ktor.logging.*
-import org.jetbrains.ktor.response.*
-import org.jetbrains.ktor.routing.*
+import org.jetbrains.ktor.application.Application
+import org.jetbrains.ktor.application.call
+import org.jetbrains.ktor.application.install
+import org.jetbrains.ktor.features.DefaultHeaders
+import org.jetbrains.ktor.logging.CallLogging
+import org.jetbrains.ktor.response.respondText
+import org.jetbrains.ktor.routing.Routing
+import org.jetbrains.ktor.routing.get
+
 
 fun Application.main() {
     install(DefaultHeaders)
