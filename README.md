@@ -2,6 +2,8 @@
 A simple ktor project using gradle build system
 
 ## How to run
+##### Important: You don`t need to install any web server, just execute the project!
+
 ```shell
 git clone git@github.com:BugsBunnyBR/base-ktor-gradle.git
 cd base-ktor-gradle
@@ -45,6 +47,8 @@ base-ktor-gradle/
  - `src/main/kotlin/*` is where you should place your kotlin packages/classes
  - `src/main/resources/application.conf` defines which port to run, environment and the "bootstrap" class/method of your application.
  - `src/main/resources/logback.xml defines where the server should log (default is the console where it is running). 
+ 
+
  
 
 
