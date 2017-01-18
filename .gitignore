@@ -1,0 +1,22 @@
+*.iml
+.gradle
+/.idea
+.DS_Store
+/build
+/dist
+out
+tmp
+/captures
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+
+# Log Files
+*.log
+
+# IntelliJ
+out/
