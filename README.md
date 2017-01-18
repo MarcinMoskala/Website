@@ -44,7 +44,7 @@ base-ktor-gradle/
  - `settings.gradle` defines which gradle modules are part of your build path.
  - `src/main/kotlin/*` is where you should place your kotlin packages/classes
  - `src/main/resources/application.conf` defines which port to run, environment and the "bootstrap" class/method of your application.
- - src/main/resources/logback.xml defines where the server should log (default is the console where it is running). 
+ - *src/main/resources/logback.xml* defines where the server should log (default is the console where it is running). 
  
 
 
