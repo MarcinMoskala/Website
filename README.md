@@ -9,3 +9,26 @@ cd base-ktor-gradle
 ```
 
 Open browser http://localhost:8080
+
+## Project folder Structure
+
+```
+
+base-ktor-gradle/
+  |-- web/
+  |   -- META-INF/context.xml
+  |   -- WEB-INF/web.xml
+  |-- gradle/wrapper
+  |       -- gradle-wrapper.jar
+  |       -- gradle-wrapper.properties
+  |-- build.gradle
+  |-- gradlew
+  |-- gradlew.bat
+  |-- settings.gradle
+  |-- src/main/
+  |       -- kotlin/com/sample/Main.kt
+  |       -- resources/
+  |           -- application.conf
+  |           -- logback.xml
+  ```
+  
