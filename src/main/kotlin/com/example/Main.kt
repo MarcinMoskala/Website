@@ -9,7 +9,6 @@ import org.jetbrains.ktor.response.respondText
 import org.jetbrains.ktor.routing.Routing
 import org.jetbrains.ktor.routing.get
 
-
 fun Application.main() {
     install(DefaultHeaders)
     install(CallLogging)
