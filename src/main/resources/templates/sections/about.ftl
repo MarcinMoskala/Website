@@ -22,16 +22,16 @@
         <!-- avatar -->
         <div class="col-xs-4">
             <div class="team-member wow zoomIn">
-                <img src="{{ site.author.head_img | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
-                <h4><span class="navy">{{ site.author.last_name }} {{ site.author.first_name }}</span></h4>
+                <img src="/site.author.head_img" height="110" width="110" class="img-responsive img-circle" alt="">
+                <h4><span class="navy">Moskała Marcin</span></h4>
                 <ul class="list-inline social-icon">
-                    <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
+                    <li><a href="https://github.com/MarcinMoskala" target="blank"><i class="fa fa-github"></i></a>
                     </li>
-                    <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="blank"><i class="fa fa-facebook"></i></a>
-                    <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
+                    <li><a href="https://www.facebook.com/mmoskala" target="blank"><i class="fa fa-facebook"></i></a>
+                    <li><a href="mailto:marcinmoskala@gmail.com"><i class="fa fa-envelope-o"></i></a>
                     </li>
                     </li>
-                    <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
+                    <li><a href="/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
     </div>
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg wow zoomIn">
-            <p><span data-i18n="about_me.des">{{ site.author.desc }}</span></p>
+            <p><span data-i18n="about_me.des">Desctiption</span></p>
         </div>
     </div>
 </div>

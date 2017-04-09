@@ -8,20 +8,19 @@
     <div class="row features-block">
         <div class="col-lg-12">
             <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
-            {% for career in site.data.careers %}
-            {% assign loopindex = forloop.index | modulo: 2 %}
+            <#list careers as career>
                 <div class="vertical-timeline-block">
                     <div class="vertical-timeline-icon navy-bg wow rotateIn">
-                        <i class="fa {{ career.icon }}"></i>
-                    </div>
-                    <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
-                        <h2><span data-i18n="career.{{ career.name.i18n }}">{{ career.name.detail }}</span></h2>
-                        <p><span data-i18n="career.{{ career.desc.i18n }}">{{ career.desc.detail }} </span></p>
-                        <span class="vertical-date"><span data-i18n="career.{{ career.date.i18n }}"> {{ career.date.detail }} </span>
-                        <br/> <small><span data-i18n="career.{{ career.job.i18n }}">{{ career.job.detail }}</span></small> </span>
+                        <i class="fa ${ career.icon }"></i>
+                    </div>1
+                    <div class="vertical-timeline-content wow <#if section?index % 2 == 0> rotateInUpRight <#else> rotateInUpLeft </#if>">
+                        <h2><span data-i18n="career.${ career.nameT }"> Name </span></h2>
+                        <p><span data-i18n="career.${ career.detailT }"> Detail </span></p>
+                        <span class="vertical-date"><span data-i18n="career.${ career.dateT }"> Date </span>
+                        <br/> <small><span data-i18n="career.${ career.jobT }"> Detail </span></small> </span>
                     </div>
                 </div>
-            {% endfor %}
+            </#list>
             </div>
         </div>
     </div>
