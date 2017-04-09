@@ -11,7 +11,8 @@ fun Route.indexRoute() {
                 "title" to "Marcin Moskala website",
                 "languages" to languages,
                 "sections" to sections,
-                "careers" to career
+                "careers" to career,
+                "projects" to projets
         )
         call.respond(FreeMarkerContent("index.ftl", model, "Index"))
     }
@@ -77,4 +78,22 @@ val speaking = listOf(
         CareerOrSpeaking("mv", "fa-commenting-o", "http://www.warszawskiedniinformatyki.pl"),
         CareerOrSpeaking("reactivex", "fa-newspaper-o", "/static/files/MMReactiveX.pdf"),
         CareerOrSpeaking("kotlinarticle", "fa-newspaper-o", "/static/files/MMKotlin.pdf")
+)
+
+class Project(
+        val name: String,
+        val descT: String,
+        val url: String,
+        val img: String
+)
+
+val projets = listOf(
+        Project("Docplanner Doctor App", "DocplannerDoctor", "//play.google.com/store/apps/details?id=pl.znanylekarz.lekarz", "static/img/landing/ic_launcher.png"),
+        Project("Warta Mobile", "WartaMobile", "//play.google.com/store/apps/details?id=pl.warta.mobile", "static/img/landing/warta.png"),
+        Project("Activity Starter", "ActivityStarter", "https://github.com/MarcinMoskala/ActivityStarter", "static/img/landing/github.png"),
+        Project("Kotlin Wonders", "KotlinWonders", "//github.com/MarcinMoskala/kotlinWonders", "static/img/landing/github.png"),
+        Project("KotlinPreferences", "KotlinPreferences", "https://github.com/MarcinMoskala/KotlinPreferences", "static/img/landing/github.png"),
+        Project("PreferenceHolder", "PreferenceHolder", "https://github.com/MarcinMoskala/PreferenceHolder", "static/img/landing/github.png"),
+        Project("Nootro", "Nootro", "http://nootro.pl/", "static/img/landing/nootro.png"),
+        Project("Stack Tester", "StackTester", "https://github.com/MarcinMoskala/StackTester", "static/img/landing/st.png")
 )
