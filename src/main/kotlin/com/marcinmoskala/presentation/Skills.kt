@@ -15,7 +15,7 @@ fun Route.skillsRoute() {
                 title { +"HTML Application" }
             }
             body {
-                for(s in skills) {
+                for (s in skills) {
                     skillView(s)
                 }
             }
@@ -24,15 +24,13 @@ fun Route.skillsRoute() {
 }
 
 private fun FlowContent.skillView(skill: Skill) {
-    div {
+    section {
+        id = skill.id
         h3 { +skill.name }
         +skill.description
-        if(skill.subskills.isNotEmpty())
-        ul {
-            for(s in skill.subskills) {
-                li {
-                    skillView(s)
-                }
+        if (skill.subskills.isNotEmpty()) {
+            ul {
+                skill.subskills.forEach { s -> li { skillView(s) } }
             }
         }
     }
