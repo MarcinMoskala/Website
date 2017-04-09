@@ -23,7 +23,7 @@ fun Route.skillsRoute() {
     }
 }
 
-fun kotlinx.html.HtmlBlockTag.skillView(skill: Skill, function: () -> Unit = {}) {
+fun FlowContent.skillView(skill: Skill) {
     div {
         h3 { +skill.name }
         +skill.description
