@@ -23,7 +23,7 @@ fun Route.skillsRoute() {
     }
 }
 
-fun FlowContent.skillView(skill: Skill) {
+private fun FlowContent.skillView(skill: Skill) {
     div {
         h3 { +skill.name }
         +skill.description

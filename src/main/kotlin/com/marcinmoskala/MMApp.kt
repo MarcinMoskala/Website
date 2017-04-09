@@ -1,6 +1,7 @@
 package com.marcinmoskala
 
 import com.marcinmoskala.presentation.indexRoute
+import com.marcinmoskala.presentation.projectsRoute
 import com.marcinmoskala.presentation.skillsRoute
 import freemarker.cache.ClassTemplateLoader
 import org.jetbrains.ktor.application.Application
@@ -27,6 +28,7 @@ class MMApp {
         install(Routing) {
             indexRoute()
             skillsRoute()
+            projectsRoute()
             route("static") {
                 serveFileSystem(File("src/main/resources/static"))
             }
