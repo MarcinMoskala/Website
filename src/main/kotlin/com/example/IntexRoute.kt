@@ -13,7 +13,8 @@ fun Route.indexRoute() {
                 "sections" to sections,
                 "careers" to career,
                 "skills" to skills,
-                "projects" to projets
+                "projects" to projets,
+                "speaking" to speaking
         )
         call.respond(FreeMarkerContent("index.ftl", model, "Index"))
     }

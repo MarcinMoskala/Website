@@ -8,20 +8,19 @@
     <div class="row features-block">
         <div class="col-lg-12">
             <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
-            {% for speaking in site.data.speaking %}
-            {% assign loopindex = forloop.index | modulo: 2 %}
+            <#list speaking as speak>
                 <div class="vertical-timeline-block">
                     <div class="vertical-timeline-icon navy-bg wow rotateIn">
-                        <i class="fa {{ speaking.icon }}"></i>
+                        <i class="fa ${ speak.icon }}"></i>
                     </div>
-                    <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
-                        <h2><a href="{{ speaking.link }}"><span data-i18n="speaking.{{ speaking.name.i18n }}">{{ speaking.name.detail }}</span></a></h2>
-                        <p><span data-i18n="speaking.{{ speaking.desc.i18n }}">{{ speaking.desc.detail }} </span></p>
-                        <span class="vertical-date"><span data-i18n="speaking.{{ speaking.date.i18n }}"> {{ speaking.date.detail }} </span>
-                        <br/> <small><span data-i18n="speaking.{{ speaking.job.i18n }}">{{ speaking.job.detail }}</span></small> </span>
+                    <div class="vertical-timeline-content wow <#if speak?index % 2 == 0> rotateInUpRight <#else> rotateInUpLeft </#if> ">
+                        <h2><a href="${ speak.link }"><span data-i18n="speaking.${ speak.nameT }"></span></a></h2>
+                        <p><span data-i18n="speaking.${speak.detailT}"> </span></p>
+                        <span class="vertical-date"><span data-i18n="speaking.{{ speak.dateT }}"></span>
+                        <br/> <small><span data-i18n="speaking.{{ speak.jobT }}"></span></small> </span>
                     </div>
                 </div>
-            {% endfor %}
+            </#list>
             </div>
         </div>
     </div>

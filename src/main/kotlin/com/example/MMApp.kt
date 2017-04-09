@@ -17,7 +17,6 @@ class MMApp {
     fun Application.install() {
         install(DefaultHeaders)
         install(CallLogging)
-
         install(FreeMarker) {
             templateLoader = ClassTemplateLoader(MMApp::class.java.classLoader, "templates")
         }

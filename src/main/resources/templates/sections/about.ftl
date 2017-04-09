@@ -22,7 +22,7 @@
         <!-- avatar -->
         <div class="col-xs-4">
             <div class="team-member wow zoomIn">
-                <img src="/site.author.head_img" height="110" width="110" class="img-responsive img-circle" alt="">
+                <img src="/static/img/landing/marcin.jpg" height="110" width="110" class="img-responsive img-circle" alt="">
                 <h4><span class="navy">Moskała Marcin</span></h4>
                 <ul class="list-inline social-icon">
                     <li><a href="https://github.com/MarcinMoskala" target="blank"><i class="fa fa-github"></i></a>
