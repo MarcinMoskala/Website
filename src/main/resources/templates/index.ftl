@@ -1,5 +1,7 @@
+<!DOCTYPE html>
+<html>
 <#include "header.ftl">
-
+<body id="page-top" class="landing-page">
 <div class="navbar-wrapper">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -76,7 +78,7 @@
 </div>
 
 <#list sections as section>
-  <section id="{{ section.id }}" class="features <#if section?index % 2 == 0> gray-section <#else> {{ section.css }} </#if>" style="margin-top: 0px;">
+  <section id="${ section.name }" class="features <#if section?index % 2 == 0> gray-section <#else> ${ section.css } </#if>" style="margin-top: 0px;">
       <#include "sections/${section.tpl}">
   </section>
 </#list>
@@ -92,3 +94,6 @@
 </section>
 
 <#include "/footer.ftl">
+
+</body>
+</html>
