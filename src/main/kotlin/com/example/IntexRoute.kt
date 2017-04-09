@@ -12,6 +12,7 @@ fun Route.indexRoute() {
                 "languages" to languages,
                 "sections" to sections,
                 "careers" to career,
+                "skills" to skills,
                 "projects" to projets
         )
         call.respond(FreeMarkerContent("index.ftl", model, "Index"))
@@ -44,7 +45,7 @@ val sections = listOf<Any>(
 
 class Skill(
         val name: String,
-        val precentage: Int
+        val percentage: Int
 )
 
 val skills = listOf(
