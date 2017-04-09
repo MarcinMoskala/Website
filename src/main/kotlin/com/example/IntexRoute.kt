@@ -10,7 +10,8 @@ fun Route.indexRoute() {
         val model = mapOf<Any, Any>(
                 "title" to "Marcin Moskala website",
                 "languages" to languages,
-                "sections" to sections
+                "sections" to sections,
+                "careers" to career
         )
         call.respond(FreeMarkerContent("index.ftl", model, "Index"))
     }
