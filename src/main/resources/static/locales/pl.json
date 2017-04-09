@@ -1,0 +1,78 @@
+{
+  "website":{
+    "title": "Strona Marcina Moskały"
+  },
+  "nav":{
+    "home": "Główna",
+    "about_me": "O mnie",
+    "skills": "Umiejętności",
+    "projects": "Projekty",
+    "career": "Kariera",
+    "consulting": "Kontakt"
+  },
+  "about_me":{
+    "about_me": "O mnie",
+    "des": "Zawodowo jestem głównym programistą Kotlina na platformę Android dla ZnanegoLekarza. Do tego zajmuję się Machine Learningiem. Piszę artykuły oraz tworzę i rozwijam biblioteki Open-Source. Mam podwójny tytuł inżyniera w dziedzinie Informatyki oraz Telekomunikacji. Także sporadycznie mam przyjemność prowadzić wykłady. Najczęściej na temat Kotlina, Androida oraz RxJavy. Razem ze swoją dziewczyną założyliśmy Nootro, gdzie produkujemy suplement dla mózgu - nRise."
+  },
+  "skills":{
+    "my_skills": "Umiejętności"
+  },
+  "projects":{
+    "my_projects": "Projekty",
+    
+    "DocplannerDoctor": "Mobilna aplikacja lekarska dla portalu ZnanyLekarz która pozwala lekarzom na łatwiejsze zarządzanie swoim grafikiem dodawanie i usuwanie wizyt oraz prostszą komunikację z pacjentami poprzez system wiadomości i notyfikcaje.",
+    "WartaMobile": "Aplikacja napisana z ramienia firmy Apreel na zlecenie firmy ubezpieczeniowej Warta. Aplikacja została napisana dla klientów Warty, którzy doznali szkody. Pozwala ona na prostszą komunikację, dostarczenia dokumentacji i wreszcie zamknięcie szkody. ",
+    
+    "ActivityStarter": "Biblioteka dla Androida, która przy pomocy generacji kodu tworzy prosty sposób na uruchamianie Activity, zawierające dane przekazywane jako argumenty.",
+    "KotlinWonders": "Sztuczna inteligencja do gry planszowej \"7 cudów świata\" oparta na algorytmie MCTS i napisana w Kotlinie w stylu funkcyjnym. ",
+    
+    "KotlinPreferences": "Biblioteka dla Androida, która ułatwia korzystanie z SharedPreferences dzięki sprytnemu rozwiązaniu wykorzystującemu nietypowe cechy Kotlina.",
+    "PreferenceHolder": "Biblioteka Open-Source dla Kotlina w Androidzie, która upraszcza korzystanie z SharedPreferences tak bardzo jak to tylko możliwe.",
+    
+    "Nootro": "Startup tworzący i sprzedający suplement dla rozwoju mózgu.",
+    "StackTester": "Aplikacja do testowania jak działają flagi stosu w Androidzie. " 
+  },
+  "career":{
+    "my_career": "Moja kariera",
+    "docplanner": "Znany Lekarz",
+    "docplanner_des": "Głowny Kotlin Android Developer dla Znanego Lekarza - polskiego startup’u tworzącego platformę dla lekarzy i pacjentów.",
+    "docplanner_date": "Od 3.2016 do teraz",
+    "docplanner_job": "Master of Android Development",
+    "apreel": "Apreel",
+    "apreel_des": "Tworzenie aplikacji Warta Mobile dla Apreel na zlecenie Warty.",
+    "apreel_date": "2015.3-2016.3",
+    "apreel_job": "Android Developer",
+    "samsung": "Samsung",
+    "samsung_des": "Rozbudowa platformy RTL do zdalnego testowania aplikacji na urządzeniach firmy Samsung.",
+    "samsung_date": "2014.10-2015.3",
+    "samsung_job": "Java oraz JavaScript Developer",
+    "college": "Studia",
+    "college_des": "Uzyskałem tytuł inżyniera z dziedziny Telekomunikacji (studia zaliczone na Bardzo Dobry), oraz z Informatyki (studia także zaliczone na Bardzo Dobry). Obydwa kierunki zostały zrobione na Politechnice Warszawskiej na wydziale EITI.",
+    "college_date": "",
+    "college_job": "Student"
+  },
+  "speaking":{
+    "my_speaking": "Moje wystąpienia i artykuły",
+    "reactivex": "Artykuł 'ReactiveX – programowanie reaktywne w niemalże każdym języku i systemie'",
+    "reactivex_des": "Magazyn Programista - największy programistyczny magazyn w Polsce",
+    "reactivex_date": "Wydane 2.2017",
+    "reactivex_job": "",
+    "kotlinarticle": "Artykuł 'Język Kotlin – przyszłość Javy?'",
+    "kotlinarticle_des": "Magazyn Programista - największy programistyczny magazyn w Polsce",
+    "kotlinarticle_date": "Wydane 8.2016",
+    "kotlinarticle_job": "",
+    "mv": "Szkoły: MVC, MVP, MVVM. Czym się jednak różnią? Jakie mają silne i mocne strony?",
+    "mv_des": "Warszawskie Dni Informatyki - największa konferencja programistyczna w Polsce",
+    "mv_date": "29.3.2017 12.10-13.10",
+    "mv_job": ""
+  },
+  "consultation":{
+    "consultation_offer": "Chcesz się skontaktować?",
+    "consultation_button": "Napisz do mnie"
+  },
+  "link":{
+    "link": "Link",
+    "view": "widoki"
+  }
+
+}

@@ -1,0 +1,73 @@
+{
+  "website":{
+    "title": "Martin's blog"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "career": "Career",
+    "consulting": "Contact"  
+  },
+  "about_me":{
+    "about_me": "About Me",
+    "des": "Professionally I am main Android Developer for Docplanner, where I write on Kotlin. I am also doing Machine Learning projects. I write articles and develop Open-Source libraries. I also have double engineer title, from Computer Science and Telecommunication. Occasionally I have a pleasure to make some lecture. Mostly about Kotlin, Android and RxJava. Together with my girlfriend we created Nootro - startup that is producing and selling supplements for brain"
+  },
+  "skills":{
+    "my_skills": "My Skills"
+  },
+  "projects":{
+    "my_projects": "Projects",
+    
+    "DocplannerDoctor": "Mobile application for Docplanner. It allows doctors to easily manage their schedule and contact with patients. ",
+    "WartaMobile": "Mobile application made for Warta - the polish popular insurance company. Application helps for Warta clients to easily and quickly go through process of closing insurance claim.",
+
+    "ActivityStarter": "Android Library that provides simpler way to start the Activities with multiple arguments.",
+    "KotlinWonders": "Artificial intelligence for \"7 wonders\" board game. Written completely functionally in Kotlin. ",
+
+    "KotlinPreferences": "Kotlin Android Library, that makes preference usage easy.",
+    "PreferenceHolder": "Kotlin Android Library, that makes SharedPreferences usage as simple and fun as possible.",
+
+    "StackTester": "Applicaction for testing different stack flags. ",
+    "Nootro": "Startup creating and selling brain improvement supplement."
+  },
+  "career":{
+    "my_career": "My Career",
+    "docplanner": "Docplanner",
+    "docplanner_des": "Main Android Developer creating doctor and patient mobile applications. ",
+    "docplanner_date": "From 3.2016 till now",
+    "docplanner_job": "Master of Android Development",
+    "apreel": "Apreel",
+    "apreel_des": "Creation of Warta Mobile application for Warta. ",
+    "apreel_date": "2015.3-2016.3",
+    "apreel_job": "Android Developer",
+    "samsung": "Samsung",
+    "samsung_des": "Development of RTL - remote testing tool for Android Samsung devices.",
+    "samsung_date": "2014.10-2015.3",
+    "samsung_job": "Java and JavaScript Developer",
+    "college": "Graduation",
+    "college_des": "I get engeneer title from Telecommunication (finished with A), and another engineer title in Computer Science (also with A). Both courses were finished on Warsaw University of Technology - biggest and most prestigious technical university in Poland.",
+    "college_date": "",
+    "college_job": "Student"
+  },
+  "speaking":{
+    "my_speaking": "My writing and speaking",
+    "reactivex": "Article 'ReactiveX - reactive programming in nearly any language'",
+    "reactivex_des": "Programmer Magazine - biggest programmer magazine in Poland",
+    "reactivex_date": "2.2017",
+    "reactivex_job": "",
+    "kotlinarticle": "Article 'Kotlin - Future of Java?'",
+    "kotlinarticle_des": "Programmer Magazine - biggest programmer magazine in Poland",
+    "kotlinarticle_date": "8.2016",
+    "kotlinarticle_job": "",
+    "mv": "MVC, MVP, MVVM. What are they? What are the differences?",
+    "mv_des": "Warszawskie Dni Informatyki - biggest programming event in Poland",
+    "mv_date": "29.3.2017 12.10-13.10",
+    "mv_job": ""
+  },
+  "consultation":{
+    "consultation_offer": "Need a contact?",
+    "consultation_button": "Email me"
+  }
+}
