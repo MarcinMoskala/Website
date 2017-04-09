@@ -46,6 +46,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.jetbrains.ktor:ktor-core:$ktor_version"
     compile "org.jetbrains.ktor:ktor-locations:$ktor_version"
+    compile "org.jetbrains.ktor:ktor-html-builder:$ktor_version"
     runtime "org.jetbrains.ktor:ktor-jetty:$ktor_version"
     compile "org.jetbrains.ktor:ktor-freemarker:$ktor_version"
     compile "org.slf4j:slf4j-api:1.7.5"
