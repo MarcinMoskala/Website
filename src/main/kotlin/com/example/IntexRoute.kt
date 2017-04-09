@@ -9,11 +9,19 @@ fun Route.indexRoute() {
     get("/") {
         val model = mapOf<Any, Any>(
                 "title" to "Marcin Moskala website",
+                "languages" to languages,
                 "sections" to sections
         )
         call.respond(FreeMarkerContent("index.ftl", model, "Index"))
     }
 }
+
+class Language(val locale: String, val flag: String)
+
+val languages = listOf(
+        Language("en", "static/img/flags/United-States.png"),
+        Language("pl", "static/img/flags/Poland.png")
+)
 
 class Section(
         val name: String,
@@ -24,12 +32,12 @@ class Section(
 )
 
 val sections = listOf<Any>(
-        Section("about-me", "nav.about_me", "About", "about.html", ""),
-        Section("career", "nav.career", "Career", "career.html", "timeline"),
-        Section("skills", "nav.skills", "Skills", "skills.html", "team"),
-        Section("speaking", "nav.speaking", "Speaking", "speaking.html", "timeline"),
-        Section("projects", "nav.projects", "Projects", "projects.html", "project"),
-        Section("consulting", "nav.consulting", "Contact", "consulting.html", "testimonials navy-section")
+        Section("about-me", "nav.about_me", "About", "about.ftl", ""),
+        Section("career", "nav.career", "Career", "career.ftl", "timeline"),
+        Section("skills", "nav.skills", "Skills", "skills.ftl", "team"),
+        Section("speaking", "nav.speaking", "Speaking", "speaking.ftl", "timeline"),
+        Section("projects", "nav.projects", "Projects", "projects.ftl", "project"),
+        Section("consulting", "nav.consulting", "Contact", "consulting.ftl", "testimonials navy-section")
 )
 
 class Skill(

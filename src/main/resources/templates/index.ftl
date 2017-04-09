@@ -27,13 +27,13 @@
                       </a>
                     </li>
 
-                {% for language in site.languages %}
+                 <#list languages as language>
                   <li>
-                    <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
-                      <img src="{{ language.flag | prepend: site.baseurl }}" height="16px" width="16px">
+                    <a id="set_lang_${ language.locale }" class="btn btn-sm set_${ language.locale }" data-locale="${ language.locale }">
+                      <img src="/${language.flag}" height="16px" width="16px">
                     </a>
                   </li>
-                {% endfor %}
+                </#list>
                 </ul>
             </div>
         </div>
@@ -75,18 +75,17 @@
     </a>
 </div>
 
-{% for section in site.sections %}
-  {% assign loopindex = forloop.index | modulo: 2 %}
-  <section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0px;">
-    {% include sections/{{section.tpl}} %}
+<#list sections as section>
+  <section id="{{ section.id }}" class="features <#if section?index % 2 == 0> gray-section <#else> {{ section.css }} </#if>" style="margin-top: 0px;">
+      <#include "sections/${section.tpl}">
   </section>
-{% endfor %}
+</#list>
 
 <section class="features contact" style="margin-top: 0px;">
     <div class="container" id="i18_link">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <strong>&copy; {{ 'now' | date: "%Y" }} {{ title }}</strong></p>
+                <strong>Marcin Moskala Website</strong></p>
             </div>
         </div>
     </div>
