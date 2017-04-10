@@ -7,7 +7,7 @@ val projetsOnMain get() = Project.values().filter { it.showOnMain }
 enum class Project(
         override val visibleName: String,
         val descT: String,
-        val url: String,
+        val url: String? = null,
         val img: String,
         val showOnMain: Boolean = false,
         override val description: String? = null

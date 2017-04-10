@@ -13,7 +13,7 @@ enum class Learning(
     CleanCode("Clean Code", Book),
     KotlinInAction("Kotlin in Action", Book),
     EffectiveJava("Effective Java", Book, comment = "Not yet finished"),
-    MachineLearning("Machine Learning on Coursera", Course, description = "Course was about basics of neural networks and learning algorithms.", comment = "Coursera course"),
+    MachineLearningCoursera("Machine Learning on Coursera", Course, description = "Course was about basics of neural networks and learning algorithms.", comment = "Coursera course"),
     FunctionalProgrammingCoursera("Machine Learning on Coursera", Course),
     ;
 

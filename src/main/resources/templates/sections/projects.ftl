@@ -10,7 +10,7 @@
             <div class="col-sm-6 wow <#if project?index % 2 == 0> fadeInLeft <#else> fadeInRight </#if>">
               <div class="team-member">
                   <img src="${project.img}" class="img-responsive img-circle img-small" alt="">
-                  <h4><a href="${project.url}" target="blank"><span class="navy">${project.visibleName}</a></span></h4>
+                  <h4><a href="${project.linkTo}" target="blank"><span class="navy">${project.visibleName}</a></span></h4>
                   <p><span data-i18n="projects.${project.descT}"> Desc </span></p>
               </div>
           </div>
