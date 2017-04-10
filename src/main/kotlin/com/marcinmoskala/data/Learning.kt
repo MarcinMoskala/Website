@@ -16,8 +16,7 @@ enum class Learning(
 
     ;
 
-    override val linkTo: String?
-        get() = "/steps/#$id"
+    override val linkTo: String? by lazy { "/learning#$id" }
 
     enum class Type {
         Book, Course
