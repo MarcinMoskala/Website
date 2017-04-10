@@ -9,12 +9,12 @@ interface SkillTreeElement
 enum class Skill(
         override val visibleName: String,
         val percentage: Int? = null,
-        val description: String = "",
+        override val description: String = "",
         val visibleOnMain: Boolean = false,
         val category: SkillCategory? = null,
         val url: String? = null,
         val base: List<SkillBase> = listOf()
-) : Connector, SkillTreeElement {
+) : SkillBase, SkillTreeElement {
     Kotlin("Kotlin",
             percentage = 100,
             visibleOnMain = true,
@@ -25,17 +25,37 @@ enum class Skill(
             visibleOnMain = true,
             percentage = 90,
             category = ProgrammingLanguages,
-            base = listOf(Learning.EffectiveJava, Learning.CleanCode, Project.WartaMobile)
+            base = listOf(Learning.EffectiveJava, Learning.CleanCode, Project.WartaMobile, Project.ActivityStarter, Project.ConvictConditioning, Skill.Kotlin)
     ),
     JavaScript("JavaScript", visibleOnMain = true, percentage = 70, category = ProgrammingLanguages),
-    Scala("Scala", visibleOnMain = true, percentage = 40, category = ProgrammingLanguages),
-    Matlab("Matlab", percentage = 40, category = ProgrammingLanguages),
-    Python("Python", visibleOnMain = true, percentage = 40, category = ProgrammingLanguages),
+    Scala("Scala",
+            visibleOnMain = true,
+            percentage = 40,
+            category = ProgrammingLanguages
+    ),
+    Matlab("Matlab",
+            percentage = 40,
+            category = ProgrammingLanguages
+    ),
+    Python("Python",
+            visibleOnMain = true,
+            percentage = 40,
+            category = ProgrammingLanguages
+    ),
+    Haskell("Haskell",
+            visibleOnMain = true,
+            percentage = 40,
+            category = ProgrammingLanguages
+    ),
     Android("Android",
             category = Technologies,
             base = listOf(Project.ActivityStarter, Project.WartaMobile, Project.StackTester, Project.DocplannerDoctor, Project.KotlinPreferences, Project.PreferenceHolder, Project.ConvictConditioning)
     ),
-    Spark("Spark", category = Technologies, description = "Web framework used most often for data analysis."),
+    Spark("Spark",
+            category = Technologies,
+            description = "Web framework used most often for data analysis.",
+            base = listOf(Project.PersonalWebsite)
+    ),
     Ktor("Ktor", category = Technologies, description = "Kotlin Web framework. This website is on Ktor."),
     Gradle("Gradle", category = Technologies, description = "Java build system based on Groovy. Successor of Maven. Popular for Android."),
     ReactiveProgramming("Reactive programming", category = ProgrammingStyles),
@@ -67,7 +87,7 @@ enum class Skill(
 
 enum class SkillCategory(
         override val visibleName: String,
-        val  description: String? = null,
+        val description: String? = null,
         val parent: SkillCategory? = null
 ) : Connector, SkillTreeElement {
     ProgrammingLanguages("Programming languages"),

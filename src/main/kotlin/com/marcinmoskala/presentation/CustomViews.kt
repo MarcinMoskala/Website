@@ -8,7 +8,6 @@ import kotlinx.html.a
 fun FlowContent.skillBaseView(s: SkillBase) {
     a(s.linkTo) { +s.visibleName }
     s.description?.let { +it }
-    s.complition?.let { +it }
 }
 
 fun FlowContent.connectedSkillsView(connectedSkills: List<Skill>) {

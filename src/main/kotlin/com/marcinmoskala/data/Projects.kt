@@ -10,8 +10,7 @@ enum class Project(
         val url: String,
         val img: String,
         val showOnMain: Boolean = false,
-        override val description: String? = null,
-        override val complition: String? = null
+        override val description: String? = null
 ) : SkillBase {
     DocplannerDoctor("Docplanner Doctor App", "DocplannerDoctor", "//play.google.com/store/apps/details?id=pl.znanylekarz.lekarz", "static/img/landing/ic_launcher.png", showOnMain = true),
     WartaMobile("Warta Mobile", "WartaMobile", "//play.google.com/store/apps/details?id=pl.warta.mobile", "static/img/landing/warta.png", showOnMain = true),
@@ -21,7 +20,8 @@ enum class Project(
     PreferenceHolder("PreferenceHolder", "PreferenceHolder", "https://github.com/MarcinMoskala/PreferenceHolder", "static/img/landing/github.png", showOnMain = true),
     Nootro("Nootro", "Nootro", "http://nootro.pl/", "static/img/landing/nootro.png", showOnMain = true),
     StackTester("Stack Tester", "StackTester", "https://github.com/MarcinMoskala/StackTester", "static/img/landing/st.png", showOnMain = true),
-    ConvictConditioning("ConvictConditioning Application", "StackTester", "https://play.google.com/store/apps/details?id=pl.marcinmoskala.activities", "static/img/landing/st.png"), // TODO
+    ConvictConditioning("ConvictConditioning Application", "ConvictConditioning", "https://play.google.com/store/apps/details?id=pl.marcinmoskala.activities", "static/img/landing/st.png"), // TODO
+    PersonalWebsite("This website", "PersonalWebsite", "/", "static/img/landing/st.png"), // TODO
     ;
 
     val id: String
