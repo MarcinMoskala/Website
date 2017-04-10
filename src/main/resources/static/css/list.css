@@ -1,0 +1,10 @@
+body {
+    background: #3385FF;
+}
+
+.category {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

@@ -1,9 +1,6 @@
 package com.marcinmoskala.presentation
 
-import kotlinx.html.BODY
-import kotlinx.html.body
-import kotlinx.html.head
-import kotlinx.html.title
+import kotlinx.html.*
 import org.jetbrains.ktor.application.call
 import org.jetbrains.ktor.html.respondHtml
 import org.jetbrains.ktor.routing.Route
@@ -14,6 +11,7 @@ fun Route.toHtmlResponseOnTemplate(path: String, function: BODY.() -> Unit) {
         call.respondHtml {
             head {
                 title { +"Marcin Moskala Website" }
+                styleLink("/static/css/list.css")
             }
             body {
                 function()

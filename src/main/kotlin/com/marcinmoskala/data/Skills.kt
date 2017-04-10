@@ -1,74 +1,80 @@
 package com.marcinmoskala.data
 
+import com.marcinmoskala.data.SkillCategory.*
 import com.marcinmoskala.model.Connector
 import com.marcinmoskala.model.SkillBase
+
+interface SkillTreeElement
 
 enum class Skill(
         override val visibleName: String,
         val percentage: Int? = null,
         val description: String = "",
         val visibleOnMain: Boolean = false,
-        val parent: Skill? = null,
+        val category: SkillCategory? = null,
         val url: String? = null,
         val base: List<SkillBase> = listOf()
-) : Connector {
-    ProgrammingLanguages("Programming languages"),
+) : Connector, SkillTreeElement {
     Kotlin("Kotlin",
             percentage = 100,
             visibleOnMain = true,
-            parent = ProgrammingLanguages,
+            category = ProgrammingLanguages,
             base = listOf(Learning.KotlinInAction, Project.PreferenceHolder, Project.ActivityStarter, Project.KotlinPreferences, Project.DocplannerDoctor, Project.KotlinWonders, Project.StackTester)
     ),
-    KotlinDelegation("Kotlin Delegation",
-            percentage = 100,
-            parent = Kotlin
-    ),
-    KotlinClassDelegation("Class delegation", percentage = 100, parent = KotlinDelegation),
-    KotlinPropertyDelegates("Property delegates", percentage = 100, parent = KotlinDelegation),
-    KotlinBasics("Kotlin Basics", percentage = 100, parent = Kotlin),
-    KotlinFunctions("Kotlin Functions", percentage = 100, parent = Kotlin),
-    KotlinClasses("Kotlin Classes", percentage = 100, parent = Kotlin),
-    KotlinExtensionFunctions("Kotlin Extension Functions", percentage = 100, parent = Kotlin),
-    KotlinCourtines("Kotlin Courtines", percentage = 0, parent = Kotlin),
     Java("Java",
             visibleOnMain = true,
             percentage = 90,
-            parent = ProgrammingLanguages,
+            category = ProgrammingLanguages,
             base = listOf(Learning.EffectiveJava, Learning.CleanCode, Project.WartaMobile)
     ),
-    JavaScript("JavaScript", visibleOnMain = true, percentage = 70, parent = ProgrammingLanguages),
-    Scala("Scala", visibleOnMain = true, percentage = 40, parent = ProgrammingLanguages),
-    Matlab("Matlab", percentage = 40, parent = ProgrammingLanguages),
-    Python("Python", visibleOnMain = true, percentage = 40, parent = ProgrammingLanguages),
-    Technologies("Technologies"),
+    JavaScript("JavaScript", visibleOnMain = true, percentage = 70, category = ProgrammingLanguages),
+    Scala("Scala", visibleOnMain = true, percentage = 40, category = ProgrammingLanguages),
+    Matlab("Matlab", percentage = 40, category = ProgrammingLanguages),
+    Python("Python", visibleOnMain = true, percentage = 40, category = ProgrammingLanguages),
     Android("Android",
-            parent = Technologies,
+            category = Technologies,
             base = listOf(Project.ActivityStarter, Project.WartaMobile, Project.StackTester, Project.DocplannerDoctor, Project.KotlinPreferences, Project.PreferenceHolder, Project.ConvictConditioning)
     ),
-    Spark("Spark", parent = Technologies, description = "Web framework used most often for data analysis."),
-    Ktor("Ktor", parent = Technologies, description = "Kotlin Web framework. This website is on Ktor."),
-    Gradle("Gradle", parent = Technologies, description = "Java build system based on Groovy. Successor of Maven. Popular for Android."),
-    ProgrammingStyles("Programming styles"),
-    ReactiveProgramming("Reactive programming", parent = ProgrammingStyles),
-    FunctionalProgramming("Functional programming", parent = ProgrammingStyles),
+    Spark("Spark", category = Technologies, description = "Web framework used most often for data analysis."),
+    Ktor("Ktor", category = Technologies, description = "Kotlin Web framework. This website is on Ktor."),
+    Gradle("Gradle", category = Technologies, description = "Java build system based on Groovy. Successor of Maven. Popular for Android."),
+    ReactiveProgramming("Reactive programming", category = ProgrammingStyles),
+    FunctionalProgramming("Functional programming", category = ProgrammingStyles),
     ObjectProgramming("Object programming",
-            parent = ProgrammingStyles,
+            category = ProgrammingStyles,
             base = listOf(Learning.CleanCode)
     ),
 
-    AspectProgramming("Aspect programming", parent = ProgrammingStyles),
-    LogicalProgramming("Logical programming", parent = ProgrammingStyles),
+    AspectProgramming("Aspect programming", category = ProgrammingStyles),
+    LogicalProgramming("Logical programming", category = ProgrammingStyles),
     DeclarativeProgramming("Declarative programming",
-            parent = ProgrammingStyles,
+            category = ProgrammingStyles,
             base = listOf(Project.ActivityStarter)
     ),
-    DataAnalysis("Data Analysis", parent = ProgrammingStyles),
-    Tools("Tools"),
-    AndroidStudio("Android Studio", parent = Tools),
-    IDEAIntelliJ("IDEA IntelliJ", parent = Tools),
-    Chrome("Chrome", parent = Tools),
+    DataAnalysis("Data Analysis", category = ProgrammingStyles),
+    AndroidStudio("Android Studio", category = Tools),
+    IDEAIntelliJ("IDEA IntelliJ", category = Tools),
+    Chrome("Chrome", category = Tools),
+    WritingSpeed("Writing speed", category = General),
+    ;
+
+    val id: String
+        get() = name
+
+    override val linkTo: String?
+        get() = "/skills/#$id"
+}
+
+enum class SkillCategory(
+        override val visibleName: String,
+        val  description: String? = null,
+        val parent: SkillCategory? = null
+) : Connector, SkillTreeElement {
+    ProgrammingLanguages("Programming languages"),
+    Technologies("Technologies"),
     General("General"),
-    WritingSpeed("Writing speed", parent = General),
+    ProgrammingStyles("Programming styles"),
+    Tools("Tools"),
     ;
 
     val id: String
@@ -77,15 +83,12 @@ enum class Skill(
     override val linkTo: String?
         get() = "/skills/#$id"
 
-    val subskills: List<Skill>
-        get() = values().filter { it.parent == this }
-
-    val withAllParents: List<Skill>
-        get() = parent?.withAllParents.orEmpty() + this
+    val skills: List<Skill>
+        get() = Skill.values().filter { it.category == this }
 }
 
 val skillsVisible: List<Skill>
     get() = Skill.values().filter { it.visibleOnMain }
 
-val skillsRoot: List<Skill>
-    get() = Skill.values().filter { it.parent == null }
+val skillsRoot: List<SkillCategory>
+    get() = SkillCategory.values().toList()
