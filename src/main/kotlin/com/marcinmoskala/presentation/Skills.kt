@@ -16,7 +16,7 @@ fun Route.skillsRoute() {
 private fun FlowContent.skillView(skill: Skill) {
     section {
         id = skill.id
-        h3 { +skill.name }
+        h3 { +skill.visibleName }
         +skill.description
         if (skill.base.isNotEmpty()) {
             +"Skill base:"
