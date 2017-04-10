@@ -1,7 +1,7 @@
 package com.marcinmoskala.presentation
 
 import com.marcinmoskala.data.languages
-import com.marcinmoskala.data.projets
+import com.marcinmoskala.data.projetsOnMain
 import com.marcinmoskala.data.skillsVisible
 import com.marcinmoskala.model.Achievement
 import org.jetbrains.ktor.application.call
@@ -37,7 +37,7 @@ fun Route.indexRoute() {
                 "sections" to sections,
                 "careers" to career,
                 "skills" to skillsVisible,
-                "projects" to projets,
+                "projects" to projetsOnMain,
                 "speaking" to speaking
         )
         call.respond(FreeMarkerContent("index.ftl", model, "Index"))

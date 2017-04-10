@@ -7,7 +7,7 @@
     </div>
     <div class="row">
         <#list projects as project>
-            <div class="col-sm-6 wow <#if project?index % 2 == 0> fadeInLeft col-sm-offset-3 <#else> fadeInRight </#if>">
+            <div class="col-sm-6 wow <#if project?index % 2 == 0> fadeInLeft <#else> fadeInRight </#if>">
               <div class="team-member">
                   <img src="${project.img}" class="img-responsive img-circle img-small" alt="">
                   <h4><a href="${project.url}" target="blank"><span class="navy">${project.visibleName}</a></span></h4>
