@@ -21,7 +21,6 @@ private fun FlowContent.skillCategoryView(skillCategory: SkillCategory) {
         skillCategory.description?.let { +it }
         if (skillCategory.skills.isNotEmpty()) {
             ul {
-
                 skillCategory.skills.forEach { s -> li { skillView(s) } }
             }
         }
