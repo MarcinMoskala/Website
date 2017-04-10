@@ -9,8 +9,11 @@ fun Route.projectsRoute() {
     toHtmlResponseOnTemplate("/projects") {
         +"Projects:"
         ul {
-            for (s in projets) {
-                li { +s.visibleName }
+            for (proj in projets) {
+                li { +proj.visibleName }
+                if (proj.connectedSkills.isNotEmpty()) {
+                    connectedSkillsView(proj.connectedSkills)
+                }
             }
         }
     }
