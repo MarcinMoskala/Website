@@ -10,7 +10,7 @@ fun Route.projectsRoute() {
         +"Projects:"
         ul {
             for (s in projets) {
-                li { +s.name }
+                li { +s.visibleName }
             }
         }
     }

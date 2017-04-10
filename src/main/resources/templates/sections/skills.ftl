@@ -9,7 +9,7 @@
         <#list skills as skill>
         <div class="row">
             <div class="col-lg-1 col-lg-offset-2 wow <#if skill?index % 2 == 0> fadeInLeft col-sm-offset-3 <#else> fadeInRight </#if>">
-                <p>${ skill.name }</p>
+                <p>${ skill.visibleName }</p>
             </div>
             <div class="col-lg-7 wow <#if skill?index % 2 == 0> fadeInLeft col-sm-offset-3 <#else> fadeInRight </#if>">
                 <div class="progress progress-bar-default">

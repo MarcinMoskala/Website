@@ -1,7 +1,6 @@
 package com.marcinmoskala.presentation
 
 import com.marcinmoskala.data.*
-import com.marcinmoskala.model.Section
 import org.jetbrains.ktor.application.call
 import org.jetbrains.ktor.freemarker.FreeMarkerContent
 import org.jetbrains.ktor.routing.Route
@@ -29,3 +28,11 @@ fun Route.indexRoute() {
         call.respond(FreeMarkerContent("index.ftl", model, "Index"))
     }
 }
+
+class Section(
+        val name: String,
+        val titleT: String,
+        val title: String,
+        val tpl: String,
+        val css: String
+)

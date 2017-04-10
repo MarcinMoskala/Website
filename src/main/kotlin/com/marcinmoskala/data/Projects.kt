@@ -1,14 +1,24 @@
 package com.marcinmoskala.data
 
-import com.marcinmoskala.model.Project
+import com.marcinmoskala.model.Connector
 
-val projets = listOf(
-        Project("Docplanner Doctor App", "DocplannerDoctor", "//play.google.com/store/apps/details?id=pl.znanylekarz.lekarz", "static/img/landing/ic_launcher.png"),
-        Project("Warta Mobile", "WartaMobile", "//play.google.com/store/apps/details?id=pl.warta.mobile", "static/img/landing/warta.png"),
-        Project("Activity Starter", "ActivityStarter", "https://github.com/MarcinMoskala/ActivityStarter", "static/img/landing/github.png"),
-        Project("Kotlin Wonders", "KotlinWonders", "//github.com/MarcinMoskala/kotlinWonders", "static/img/landing/github.png"),
-        Project("KotlinPreferences", "KotlinPreferences", "https://github.com/MarcinMoskala/KotlinPreferences", "static/img/landing/github.png"),
-        Project("PreferenceHolder", "PreferenceHolder", "https://github.com/MarcinMoskala/PreferenceHolder", "static/img/landing/github.png"),
-        Project("Nootro", "Nootro", "http://nootro.pl/", "static/img/landing/nootro.png"),
-        Project("Stack Tester", "StackTester", "https://github.com/MarcinMoskala/StackTester", "static/img/landing/st.png")
-)
+val projets get() = Project.values()
+
+enum class Project(
+        override val visibleName: String,
+        val descT: String,
+        val url: String,
+        val img: String
+): Connector {
+    DocplannerDoctor("Docplanner Doctor App", "DocplannerDoctor", "//play.google.com/store/apps/details?id=pl.znanylekarz.lekarz", "static/img/landing/ic_launcher.png"),
+    WartaNobile("Warta Mobile", "WartaMobile", "//play.google.com/store/apps/details?id=pl.warta.mobile", "static/img/landing/warta.png"),
+    ActivityStarter("Activity Starter", "ActivityStarter", "https://github.com/MarcinMoskala/ActivityStarter", "static/img/landing/github.png"),
+    KotlinWonders("Kotlin Wonders", "KotlinWonders", "//github.com/MarcinMoskala/kotlinWonders", "static/img/landing/github.png"),
+    KotlinPreferences("KotlinPreferences", "KotlinPreferences", "https://github.com/MarcinMoskala/KotlinPreferences", "static/img/landing/github.png"),
+    PreferenceHolder("PreferenceHolder", "PreferenceHolder", "https://github.com/MarcinMoskala/PreferenceHolder", "static/img/landing/github.png"),
+    Nootro("Nootro", "Nootro", "http://nootro.pl/", "static/img/landing/nootro.png"),
+    StackTester("Stack Tester", "StackTester", "https://github.com/MarcinMoskala/StackTester", "static/img/landing/st.png");
+
+    override val linkTo get() = ""
+}
+

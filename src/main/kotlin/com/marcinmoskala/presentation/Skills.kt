@@ -1,7 +1,7 @@
 package com.marcinmoskala.presentation
 
+import com.marcinmoskala.data.Skill
 import com.marcinmoskala.data.skills
-import com.marcinmoskala.model.Skill
 import kotlinx.html.*
 import org.jetbrains.ktor.application.call
 import org.jetbrains.ktor.html.respondHtml
