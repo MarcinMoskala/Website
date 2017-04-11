@@ -40,7 +40,7 @@ sourceSets {
     }
 }
 
-mainClassName = 'org.jetbrains.ktor.jetty.DevelopmentHost'
+mainClassName = 'org.jetbrains.ktor.nettys.DevelopmentHost'
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
