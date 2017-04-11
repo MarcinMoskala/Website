@@ -17,12 +17,6 @@ fun Route.indexRoute() {
                 Achievement("samsung", "fa-mobile"),
                 Achievement("college", "fa-book")
         )
-
-        val speaking = listOf(
-                Achievement("mv", "fa-commenting-o", "http://www.warszawskiedniinformatyki.pl"),
-                Achievement("reactivex", "fa-newspaper-o", "/static/files/MMReactiveX.pdf"),
-                Achievement("kotlinarticle", "fa-newspaper-o", "/static/files/MMKotlin.pdf")
-        )
         val sections = listOf(
                 Section("about-me", "nav.about_me", "About", "about.ftl", ""),
                 Section("career", "nav.career", "Career", "career.ftl", "timeline"),
