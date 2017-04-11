@@ -19,4 +19,4 @@ gen/
 *.log
 
 # IntelliJ
-out/
+out/.env
