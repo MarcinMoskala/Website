@@ -7,7 +7,7 @@ import org.jetbrains.ktor.routing.Route
 fun Route.projectsRoute() {
     toHtmlResponseOnTemplate("/projects") {
         div(classes = "category") {
-            +"Projects:"
+            h2 { +"Projects:" }
             for (proj in projetsOnMain) {
                 section {
                     id = proj.id

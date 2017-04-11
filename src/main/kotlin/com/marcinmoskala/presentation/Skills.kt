@@ -8,6 +8,7 @@ import org.jetbrains.ktor.routing.Route
 
 fun Route.skillsRoute() {
     toHtmlResponseOnTemplate("/skills") {
+        h2 { +"Skills:" }
         for (s in skillsRoot) {
             skillCategoryView(s)
         }
