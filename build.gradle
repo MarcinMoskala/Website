@@ -63,7 +63,7 @@ task wrapper(type: Wrapper) {
 
 task copyToLib(type: Copy) {
     into "/lib"
-    from(configurations.runtime)
+    from(configurations.compile)
 }
 
 task stage {
