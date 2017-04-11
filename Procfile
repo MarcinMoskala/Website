@@ -1,1 +1,1 @@
-web: java -cp target/dependency/*:target/classes/ org.jetbrains.ktor.netty.DevelopmentHost
+web: java -cp build/libs/base-ktor-gradle-1.0-SNAPSHOT.jar org.jetbrains.ktor.netty.DevelopmentHost

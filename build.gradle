@@ -42,13 +42,12 @@ sourceSets {
 mainClassName = 'org.jetbrains.ktor.netty.DevelopmentHost'
 
 dependencies {
-    compile fileTree(dir: 'lib', include: '*.jar')
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.jetbrains.ktor:ktor-core:$ktor_version"
     compile "org.jetbrains.ktor:ktor-locations:$ktor_version"
     compile "org.jetbrains.ktor:ktor-html-builder:$ktor_version"
     runtime "org.jetbrains.ktor:ktor-netty:$ktor_version"
-    compile group: 'io.netty', name: 'netty-all', version: '4.0.4.Final'
+    compile "org.jetbrains.ktor:ktor-netty:$ktor_version"
     compile "org.jetbrains.ktor:ktor-freemarker:$ktor_version"
     compile "org.slf4j:slf4j-api:1.7.5"
     compile "org.slf4j:slf4j-log4j12:1.7.5"
@@ -63,10 +62,23 @@ task wrapper(type: Wrapper) {
 }
 
 task copyToLib(type: Copy) {
-    into "lib"
-    from(configurations.compile)
+    into "$buildDir/lib"
+    from(configurations.runtime)
 }
 
 task stage {
-    dependsOn installDist, copyToLib
+    dependsOn installDist
+}
+
+jar {
+    manifest {
+        attributes  'Main-Class': 'org.jetbrains.ktor.netty.DevelopmentHost',
+                'Implementation-Title': 'My Project',
+                'Implementation-Version': '0.1'
+    }
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
 }
