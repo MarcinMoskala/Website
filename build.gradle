@@ -47,15 +47,10 @@ dependencies {
     compile "org.jetbrains.ktor:ktor-core:$ktor_version"
     compile "org.jetbrains.ktor:ktor-locations:$ktor_version"
     compile "org.jetbrains.ktor:ktor-html-builder:$ktor_version"
+    runtime "org.jetbrains.ktor:ktor-jetty:$ktor_version"
     compile "org.jetbrains.ktor:ktor-freemarker:$ktor_version"
-    compile "org.jetbrains.ktor:ktor-netty:${ktor_version}"
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
-    testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
-    compile "org.slf4j:slf4j-api:1.7.21"
-    compile "org.slf4j:slf4j-log4j12:1.7.21"
-    compile "ch.qos.logback:logback-classic:1.2.1"
-    compile "org.postgresql:postgresql:9.4-1201-jdbc4"
-    compile "com.zaxxer:HikariCP:2.6.0"
+    compile "org.slf4j:slf4j-api:1.7.5"
+    compile "org.slf4j:slf4j-log4j12:1.7.5"
     compile group: 'org.freemarker', name: 'freemarker', version: '2.3.14'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
