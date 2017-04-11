@@ -10,7 +10,6 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
     }
 }
 
@@ -40,7 +39,7 @@ sourceSets {
     }
 }
 
-mainClassName = 'org.jetbrains.ktor.nettys.DevelopmentHost'
+mainClassName = 'org.jetbrains.ktor.netty.DevelopmentHost'
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -61,12 +60,6 @@ task wrapper(type: Wrapper) {
     gradleVersion = "3.3"
 }
 
-task copyDependencies(type: Copy) {
-    from configurations.compile
-    into 'dependencies'
-}
-
 task stage {
-    copyDependencies()
     dependsOn installDist
 }
