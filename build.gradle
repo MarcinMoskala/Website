@@ -48,6 +48,7 @@ dependencies {
     compile "org.jetbrains.ktor:ktor-locations:$ktor_version"
     compile "org.jetbrains.ktor:ktor-html-builder:$ktor_version"
     runtime "org.jetbrains.ktor:ktor-netty:$ktor_version"
+    compile "org.jetbrains.ktor:ktor-netty:$ktor_version"
     compile "org.jetbrains.ktor:ktor-freemarker:$ktor_version"
     compile "org.slf4j:slf4j-api:1.7.5"
     compile "org.slf4j:slf4j-log4j12:1.7.5"
