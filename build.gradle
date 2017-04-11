@@ -61,6 +61,12 @@ task wrapper(type: Wrapper) {
     gradleVersion = "3.3"
 }
 
+task copyDependencies(type: Copy) {
+    from configurations.compile
+    into 'dependencies'
+}
+
 task stage {
+    copyDependencies()
     dependsOn installDist
 }
