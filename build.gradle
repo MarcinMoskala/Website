@@ -60,13 +60,11 @@ task wrapper(type: Wrapper) {
     gradleVersion = "3.3"
 }
 
-task stage {
-    dependsOn installDist
-}
-
 task copyToLib(type: Copy) {
     into "$buildDir/lib"
     from(configurations.runtime)
 }
 
-stage.dependsOn(copyToLib)
+task stage {
+    dependsOn installDist, copyToLib
+}
