@@ -1,1 +1,1 @@
-web: java -cp build/libs/mmweb-1.0-SNAPSHOT.jar org.jetbrains.ktor.netty.DevelopmentHost
+web: java -cp build/libs/*.jar org.jetbrains.ktor.netty.DevelopmentHost
