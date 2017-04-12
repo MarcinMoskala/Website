@@ -28,22 +28,21 @@ enum class Skill(
             base = listOf(Learning.EffectiveJava, Learning.CleanCode, Project.WartaMobile, Project.ActivityStarter, Project.ConvictConditioning, Skill.Kotlin)
     ),
     JavaScript("JavaScript", visibleOnMain = true, percentage = 70, category = ProgrammingLanguages),
+    Python("Python",
+            visibleOnMain = true,
+            percentage = 50,
+            category = ProgrammingLanguages
+    ),
     Scala("Scala",
             visibleOnMain = true,
             percentage = 40,
             category = ProgrammingLanguages
     ),
     Matlab("Matlab",
-            percentage = 40,
-            category = ProgrammingLanguages
-    ),
-    Python("Python",
-            visibleOnMain = true,
-            percentage = 40,
+            percentage = 30,
             category = ProgrammingLanguages
     ),
     Haskell("Haskell",
-            visibleOnMain = true,
             percentage = 40,
             category = ProgrammingLanguages
     ),

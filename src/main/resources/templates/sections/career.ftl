@@ -12,7 +12,7 @@
                 <div class="vertical-timeline-block">
                     <div class="vertical-timeline-icon navy-bg wow rotateIn">
                         <i class="fa ${ career.icon }"></i>
-                    </div>1
+                    </div>
                     <div class="vertical-timeline-content wow <#if career?index % 2 == 0> rotateInUpRight <#else> rotateInUpLeft </#if>">
                         <h2><span data-i18n="career.${ career.nameT }"> Name </span></h2>
                         <p><span data-i18n="career.${ career.detailT }"> Detail </span></p>
