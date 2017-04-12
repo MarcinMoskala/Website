@@ -3,7 +3,6 @@ package com.marcinmoskala.data
 import com.marcinmoskala.data.Publishing.Type.Article
 import com.marcinmoskala.data.Publishing.Type.Presentation
 import com.marcinmoskala.model.SkillBase
-import kotlin.reflect.KProperty
 
 enum class Publishing(
         override val visibleName: String,
@@ -19,7 +18,7 @@ enum class Publishing(
 ) : SkillBase {
     MVonWDI("MVC vs MVP vs MVVM pragmatically", Presentation, "mv", "fa-commenting-o", "http://www.warszawskiedniinformatyki.pl"),
     ReactiveX("ReactiveX", Article, "reactivex", "fa-newspaper-o", "/static/files/MMReactiveX.pdf"),
-    KotlinArticle("Kotlin - future of Java?", Article, "Kotlin article", "kotlinarticle", "fa-newspaper-o", "/static/files/MMKotlin.pdf")
+    KotlinArticle("Kotlin - future of Java?", Article, "kotlinarticle", "fa-newspaper-o", "/static/files/MMKotlin.pdf")
     ;
 
     override val linkTo: String? by lazy { "/learning#$id" }
