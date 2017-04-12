@@ -78,7 +78,7 @@
 </div>
 
 <#list sections as section>
-  <section id="${ section.name }" class="features <#if section?index % 2 == 0> gray-section <#else> ${ section.css } </#if>" style="margin-top: 0px;">
+  <section id="${ section.name }" class="features <#if !section?is_even_item> gray-section </#if> ${section.css}" style="margin-top: 0px;">
       <#include "sections/${section.tpl}">
   </section>
 </#list>
