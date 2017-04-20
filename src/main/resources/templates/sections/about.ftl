@@ -10,7 +10,7 @@
         <!-- python -->
         <div class="col-xs-2 wow fadeInLeft">
             <div class="team-member">
-                <img src="/static/img/landing/androidicon.png" height="60" width="60" style="margin-top: 15px;">
+                <img src="/static/img/landing/androidicon.png" alt="Android Icon" height="60" width="60" style="margin-top: 15px;">
             </div>
         </div>
         <!-- linux -->
@@ -22,7 +22,7 @@
         <!-- avatar -->
         <div class="col-xs-4">
             <div class="team-member wow zoomIn">
-                <img src="/static/img/landing/marcin.jpg" height="110" width="110" class="img-responsive img-circle" alt="">
+                <img src="/static/img/landing/marcin.jpg" alt="Marcin Moskala photo" height="110" width="110" class="img-responsive img-circle" alt="">
                 <h4><span class="navy">Moskała Marcin</span></h4>
                 <ul class="list-inline social-icon">
                     <li><a href="https://github.com/MarcinMoskala" target="blank"><i class="fa fa-github"></i></a>
@@ -39,13 +39,13 @@
         <!-- html -->
         <div class="col-xs-2 wow fadeInRight">
             <div class="team-member">
-                <img src="/static/img/landing/rxicon.png" height="60" width="60" style="margin-top: 15px;">
+                <img src="/static/img/landing/rxicon.png" alt="ReactiveX framework logo" height="60" width="60" style="margin-top: 15px;">
             </div>
         </div>
         <!-- docker -->
         <div class="col-xs-2 wow fadeInRight">
             <div class="team-member">
-                <img src="/static/img/landing/androidstudioicon.png" height="60" width="60" style="margin-top: 15px;">
+                <img src="/static/img/landing/androidstudioicon.png" alt="Android Studio logo" height="60" width="60" style="margin-top: 15px;">
             </div>
         </div>
     </div>

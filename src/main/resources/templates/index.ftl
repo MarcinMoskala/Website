@@ -32,7 +32,7 @@
                  <#list languages as language>
                   <li>
                     <a id="set_lang_${ language.locale }" class="btn btn-sm set_${ language.locale }" data-locale="${ language.locale }">
-                      <img src="/${language.flag}" height="16px" width="16px">
+                      <img src="/${language.flag}" alt="Change to language ${language.flag}" height="16px" width="16px">
                     </a>
                   </li>
                 </#list>
