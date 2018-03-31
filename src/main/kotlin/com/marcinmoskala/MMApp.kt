@@ -5,15 +5,16 @@ import com.marcinmoskala.presentation.learningRoute
 import com.marcinmoskala.presentation.projectsRoute
 import com.marcinmoskala.presentation.skillsRoute
 import freemarker.cache.ClassTemplateLoader
-import org.jetbrains.ktor.application.Application
-import org.jetbrains.ktor.application.install
-import org.jetbrains.ktor.content.serveFileSystem
-import org.jetbrains.ktor.features.DefaultHeaders
-import org.jetbrains.ktor.freemarker.FreeMarker
-import org.jetbrains.ktor.locations.Locations
-import org.jetbrains.ktor.logging.CallLogging
-import org.jetbrains.ktor.routing.Routing
-import org.jetbrains.ktor.routing.route
+import io.ktor.application.Application
+import io.ktor.application.install
+import io.ktor.content.resources
+import io.ktor.content.staticRootFolder
+import io.ktor.features.CallLogging
+import io.ktor.features.DefaultHeaders
+import io.ktor.freemarker.FreeMarker
+import io.ktor.locations.Locations
+import io.ktor.routing.Routing
+import io.ktor.routing.route
 import java.io.File
 
 class MMApp {
@@ -32,7 +33,8 @@ class MMApp {
             projectsRoute()
             learningRoute()
             route("static") {
-                serveFileSystem(File("src/main/resources/static"))
+                staticRootFolder = File("src/main/resources/")
+                resources("static")
             }
         }
     }

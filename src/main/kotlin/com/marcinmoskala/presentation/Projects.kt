@@ -2,7 +2,7 @@ package com.marcinmoskala.presentation
 
 import com.marcinmoskala.data.projetsOnMain
 import kotlinx.html.*
-import org.jetbrains.ktor.routing.Route
+import io.ktor.routing.Route
 
 fun Route.projectsRoute() {
     toHtmlResponseOnTemplate("/projects") {
