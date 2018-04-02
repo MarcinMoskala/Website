@@ -4,7 +4,7 @@ import com.marcinmoskala.data.Skill
 import com.marcinmoskala.data.SkillCategory
 import com.marcinmoskala.data.skillsRoot
 import kotlinx.html.*
-import org.jetbrains.ktor.routing.Route
+import io.ktor.routing.Route
 
 fun Route.skillsRoute() {
     toHtmlResponseOnTemplate("/skills") {

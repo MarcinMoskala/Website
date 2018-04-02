@@ -1,10 +1,10 @@
 package com.marcinmoskala.presentation
 
 import kotlinx.html.*
-import org.jetbrains.ktor.application.call
-import org.jetbrains.ktor.html.respondHtml
-import org.jetbrains.ktor.routing.Route
-import org.jetbrains.ktor.routing.get
+import io.ktor.application.call
+import io.ktor.html.respondHtml
+import io.ktor.routing.Route
+import io.ktor.routing.get
 
 fun Route.toHtmlResponseOnTemplate(path: String, function: BODY.() -> Unit) {
     get(path) {

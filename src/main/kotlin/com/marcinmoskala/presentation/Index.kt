@@ -2,10 +2,11 @@ package com.marcinmoskala.presentation
 
 import com.marcinmoskala.data.*
 import com.marcinmoskala.model.Achievement
-import org.jetbrains.ktor.application.call
-import org.jetbrains.ktor.freemarker.FreeMarkerContent
-import org.jetbrains.ktor.routing.Route
-import org.jetbrains.ktor.routing.get
+import io.ktor.application.call
+import io.ktor.freemarker.FreeMarkerContent
+import io.ktor.response.respond
+import io.ktor.routing.Route
+import io.ktor.routing.get
 
 fun Route.indexRoute() {
     get("/") {

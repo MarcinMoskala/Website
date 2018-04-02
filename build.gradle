@@ -2,11 +2,12 @@ group 'base-ktor-gradle'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.1.0'
-    ext.ktor_version = '0.3.1'
+    ext.kotlin_version = '1.2.40'
+    ext.ktor_version = '0.9.1'
 
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -22,11 +23,10 @@ targetCompatibility = 1.8
 repositories {
     mavenCentral()
     maven {
-        url 'http://dl.bintray.com/kotlin/kotlinx.support'
+        url "http://kotlin.bintray.com/ktor"
     }
-    maven {
-        url "http://dl.bintray.com/kotlin/ktor"
-    }
+    maven { url "https://dl.bintray.com/kotlin/kotlinx" }
+    maven { url  "http://dl.bintray.com/kotlin/ktor" }
     jcenter()
 }
 
@@ -39,16 +39,16 @@ sourceSets {
     }
 }
 
-mainClassName = 'org.jetbrains.ktor.netty.DevelopmentHost'
+mainClassName = "io.ktor.server.netty.DevelopmentEngine"
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile "org.jetbrains.ktor:ktor-core:$ktor_version"
-    compile "org.jetbrains.ktor:ktor-locations:$ktor_version"
-    compile "org.jetbrains.ktor:ktor-html-builder:$ktor_version"
-    runtime "org.jetbrains.ktor:ktor-netty:$ktor_version"
-    compile "org.jetbrains.ktor:ktor-netty:$ktor_version"
-    compile "org.jetbrains.ktor:ktor-freemarker:$ktor_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compile "io.ktor:ktor-server-core:$ktor_version"
+    compile "io.ktor:ktor-locations:$ktor_version"
+    compile "io.ktor:ktor-html-builder:$ktor_version"
+    runtime "io.ktor:ktor-server-netty:$ktor_version"
+    compile "io.ktor:ktor-server-netty:$ktor_version"
+    compile "io.ktor:ktor-freemarker:$ktor_version"
     compile "org.slf4j:slf4j-api:1.7.5"
     compile "org.slf4j:slf4j-log4j12:1.7.5"
     compile group: 'org.freemarker', name: 'freemarker', version: '2.3.14'
@@ -58,7 +58,7 @@ dependencies {
 defaultTasks 'run'
 
 task wrapper(type: Wrapper) {
-    gradleVersion = "3.3"
+    gradleVersion = "4.2"
 }
 
 task stage {
@@ -67,7 +67,7 @@ task stage {
 
 jar {
     manifest {
-        attributes  'Main-Class': 'org.jetbrains.ktor.netty.DevelopmentHost',
+        attributes  'Main-Class': 'io.ktor.server.netty.DevelopmentEngine',
                 'Implementation-Title': 'My Project',
                 'Implementation-Version': '0.1'
     }
@@ -75,5 +75,10 @@ jar {
         configurations.compile.collect {
             it.isDirectory() ? it : zipTree(it)
         }
+    }
+}
+kotlin {
+    experimental {
+        coroutines "enable"
     }
 }

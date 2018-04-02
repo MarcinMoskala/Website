@@ -2,9 +2,10 @@ package com.marcinmoskala.presentation
 
 import com.marcinmoskala.data.Learning
 import kotlinx.html.*
-import org.jetbrains.ktor.routing.Route
+import io.ktor.routing.Route
 
 fun Route.learningRoute() {
+
     toHtmlResponseOnTemplate("/learning") {
         showType("Books", "Books I've read", Learning.books)
         showType("Courses", "Courses I've finished", Learning.courses)
